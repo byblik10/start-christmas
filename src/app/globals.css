@@ -6,10 +6,53 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 @layer base {
+  .custom-motion-preset-stretch {
+    --motion-loop-scale-x: 95%;
+    --motion-loop-scale-y: 100%;
+    --motion-scale-timing: var(--motion-spring-bouncier);
+    --motion-scale-perceptual-duration-multiplier: 2.035;
+    --motion-scale-loop-animation: motion-scale-loop-mirror calc(var(--motion-scale-duration) * var(--motion-scale-perceptual-duration-multiplier)) var(--motion-scale-timing) var(--motion-scale-delay) both var(--motion-scale-loop-count);
+    animation: var(--motion-all-loop-and-enter-animations);
+  }
+  .custom-motion-preset-oscillate {
+    --motion-loop-translate-y: 8%; /* Существующее значение */
+    --motion-timing: cubic-bezier(0.4, 0, 0.2, 1); /* Существующее значение */
+    --motion-translate-duration: 2s; /* Увеличиваем базовую длительность */
+    --motion-translate-perceptual-duration-multiplier: 2; /* Увеличиваем множитель */
+    --motion-translate-loop-animation: motion-translate-loop-mirror calc(var(--motion-translate-duration) * var(--motion-translate-perceptual-duration-multiplier)) var(--motion-translate-timing) var(--motion-translate-delay) both var(--motion-translate-loop-count);
+    animation: var(--motion-all-loop-and-enter-animations);
+  }
+  .custom-motion-preset-expand {
+    --motion-origin-scale-x: 0%;
+    --motion-origin-scale-y: 0%;
+    --motion-origin-opacity: 0;
+    --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
+    --motion-scale-in-animation: motion-scale-in calc(var(--motion-scale-duration) * var(--motion-scale-perceptual-duration-multiplier)) var(--motion-scale-timing) var(--motion-scale-delay) both;
+    animation: var(--motion-all-loop-and-enter-animations);
+}
+.custom-motion-preset-pulse {
+  --motion-loop-scale-x: 1.07;
+  --motion-loop-scale-y: 1.07;
+  --motion-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-scale-duration: 3s;
+  --motion-scale-loop-animation: motion-scale-loop-mirror calc(var(--motion-scale-duration) * var(--motion-scale-perceptual-duration-multiplier)) var(--motion-scale-timing) var(--motion-scale-delay) both var(--motion-scale-loop-count);
+  animation: var(--motion-all-loop-and-enter-animations);
+}
   .font-golos {
     font-family: var(--font-golos);
   }
+  .font-sarina {
+    font-family: var(--font-sarina);
+  }
+  .font-modak {
+    font-family: var(--font-modak);
+  }
+  .font-coiny {
+    font-family: var(--font-coiny);
+  }     
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -73,3 +116,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+

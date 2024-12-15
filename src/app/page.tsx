@@ -1,10 +1,10 @@
-import { Header } from "@/components/shared/header";
-import Image from "next/image";
+
+import { MainSection } from "@/components/shared/main-section";
 
 export default function Home() {
   return (
     <>
-    <Header />
+    <MainSection />
     </>
   );
 }

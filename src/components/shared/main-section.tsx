@@ -1,71 +1,72 @@
-import { cn } from '@/lib/utils';
 import React from 'react';
+import { cn } from '@/lib/utils';
+import CountdownTimer from './Counter';
+import ChristmasHat from './christmas-hat';
+import EventCopy from './event-copy';
+import { ImportantButton } from './important-button';
+import { FqaButton } from './fqa-button'; // Импортируем новый компонент
+import { ContactUsButton } from './anything-button'; // Импортируем новый компонент
 
 interface Props {
     className?: string;
 }
 
-export const MainSectionr: React.FC<Props> = ({ className }) => {
+export const MainSection: React.FC<Props> = ({ className }) => {
+    const btcAddress = 'bc1qf9s08jxv68xrvhz5g4yxth6jkgxfnjy5vn26fg'; // Текст для копирования
+
     return (
-        <section className={cn("bg-[url(/christmas.png)] bg-cover bg-center bg-no-repeat pb-[96] pt-[108px] mw800:bg-top", className)}>
-            <div className='relative mx-auto max-w-[600px] text-center mw800:max-w-full mw800:pb-[250px]'>
-                {/* Для картинки */}
-                <div className='absolute -bottom-[80px] -left-[500px] max-w-[700px] mw1200:-left-[400px] mw800:left-0 mw800:max-w-[500px] mw600:-left-4 mw600:max-w-[400px]'>
-
-                </div>
+        <section className={cn("bg-[url(/christmas.png)] bg-cover bg-center bg-no-repeat pb-[96] pt-[108px] w-full h-screen", className)}>
                 {/* Главное содержание */}
-                <div className='relative z-[1] px-4'>
-                    {/* Большяа надьпись */}
-                    <div className='flex items-center justify-center'>
-
+                <div className='relative m1:mt-[90px] sm2:mt-20'>
+                    {/* Большая надпись */}
+                    <div className='flex flex-col items-center justify-center s:text-[80px] m1:text-[60px] sm:text-[70px] sm1:text-[80px] sm1/5:text-[90px] sm2:text-[100px] md:text-[110px] md2:text-[120px] md3:text-[150px] leading-[0.90] font-modak text-center text-white text-shadow-outline m1:h-[50px] m1:min-h-[50px] sm1:h-[80px] sm1:min-h-[80px] sm1/5:h-[200px] sm1/5:min-h-[200px]'>
+                        <div className='motion-blur-in-[50px] motion-duration-[2s] motion-scale-in-[0] motion-delay-[0.2s]'>
+                        <div>CHRISTMAS</div>
+                        <span>BTC</span>
+                        </div>
+                        {/* Картинка шапки Деда Мороза */}
+                        <ChristmasHat
+                            initialWidth={130} // Начальная ширина
+                            originalWidth={273} // Исходная ширина
+                            originalHeight={397} // Исходная высота
+                            className='absolute md3:top-[-180px] md3:-left-[114px] custom-motion-preset-stretch motion-delay-[2s]
+                            md3:w-[130px] md2:w-[100px] md2:top-[-140px] md2:-left-[90px]
+                            md:w-[95px] md:top-[-130px] md:-left-[83px]
+                            sm2:w-[85px] sm2:top-[-120px] sm2:-left-[76px]
+                            sm1/5:w-[75px] sm1/5:top-[-107px] sm1/5:-left-[68px]
+                            sm1:w-[65px] sm1:top-[-95px] sm1:-left-[60px]
+                            sm:w-[55px] sm:top-[-80px] sm:-left-[52px]
+                            m1:w-[48px] m1:top-[-70px] m1:-left-[45px]'
+                        />
                     </div>
-                    {/* Виджет с CA надьписью */}
-                    <div className='mx-auto mb-[17px] flex w-fit max-w-[450px] flex-col gap-2 break-words rounded-[22px] border-[3px] border-[#242337] bg-white px-7 py-6'>
-                        {/* Header виджета */}
-                        <div className='flex w-full items-center justify-between'>
-                            <span className='font-golos text-sm font-semibold text-[#C0C5D8]'>
-                                TOKEN ADDRESS
-                            </span>
-                            <div className='flex items-center gap-1'>
-                                <span className='cursor-pointer font-golos text-sm font-semibold text-[#C0C5D8]'>
-                                    COPY
-                                </span>
-                                {/* Кнопка в виде иконки, которая меняет свою иконку при нажатии на нее (надо будет добавить useState или ивент) */}
-                                <button className='grid size-10 place-items-center mw800:size-[34px]'>
 
-                                </button>
-                            </div>
+                    {/* Таймер обратного отсчёта */}
+                    <CountdownTimer />
+
+                    {/* Виджет с CA надписью */}
+                    <div className='mx-auto mt-6 flex m1:w-[350px] sm:w-[400px] sm2:w-[480px] md:w-[520px] md2:w-[540px] md3:w-[640px] flex-col break-words rounded-[22px] border-[3px] border-[#242337] bg-white px-7 -pt-[1px] pb-2 motion-blur-in-[50px] motion-duration-[2s] motion-scale-in-[0] motion-delay-[0.2s] '>
+                        {/* Header виджета */}
+                        <div className='flex w-full items-center justify-between -mb-2'>
+                            <span className='font-coiny text-sm font-semibold text-[#C0C5D8]'>
+                                BTC ADDRESS
+                            </span>
+                            <EventCopy textToCopy={btcAddress} /> {/* Передаём текст для копирования */}
                         </div>
                         {/* CA надпись */}
-                        <div className='grid grid-cols-[1fr_auto] items-center gap-4'>
-                            <div className='flex flex-col gap-1 break-all'>
-                               <p className='break-words mw800:text-lg'>fdsaflkjfalfjl;jflsda</p> 
+                        <div className='grid grid-cols-[1fr_auto] items-center'>
+                            <div className='flex flex-col break-all'>
+                                <p className='break-words m1:text-lg md3:text-[23px] font-coiny font-bold'>{btcAddress}</p> {/* Отображаем текст */}
                             </div>
-
                         </div>
                     </div>
 
                     {/* Кнопки с факом, импортом и другими вещами */}
-                    <div className='class="block flex flex-row items-center justify-center gap-2 mw800:mt-8 mw800:flex-col"'>
-                        <a className='mx-auto flex h-[57px] w-full max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] uppercase text-white mw800:max-w-[95%]' href="">
-                            {/* На этом месте можно прикрутить картинку */}
-                            <p>IMPORTANT</p>
-                        </a>
-                        <a className='mx-auto flex h-[57px] w-full max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] uppercase text-white mw800:max-w-[95%]' href="">
-                            {/* На этом месте можно прикрутить картинку */}
-                            <p>IMPORTANT</p>
-                        </a>
-                        <a className='mx-auto flex h-[57px] w-full max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] uppercase text-white mw800:max-w-[95%]' href="">
-                            {/* На этом месте можно прикрутить картинку */}
-                            <p>IMPORTANT</p>
-                        </a>
-                    </div>
-                    {/* Правая картинка */}
-                    <div className='absolute -bottom-[120px] -right-[450px] max-w-[450px] mw1200:-right-[320px] mw1024:-right-[300px] mw800:right-0 mw800:max-w-[300px] mw600:-right-16'>
-
+                    <div className='flex m1:flex-col sm1/8:flex-row items-center justify-center gap-4 mt-6 motion-blur-in-[50px] motion-duration-[2s] motion-scale-in-[0] motion-delay-[0.2s]'>
+                        <FqaButton className='sm1/8:order-1 m1:order-3' /> {/* Используем новый компонент */}
+                        <ImportantButton className='sm1/8:order-2 m1:order-1'/>
+                        <ContactUsButton className='sm1/8:order-3 m1:order-2'/> {/* Используем новый компонент */}
                     </div>
                 </div>
-            </div>
         </section>
     )
 }

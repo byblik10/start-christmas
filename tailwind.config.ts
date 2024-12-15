@@ -8,13 +8,25 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	screens: {
+		'm' : '300px',
+		'm1' : '350px',
+		'sm': '409px',
+		'sm1': '450px',
+		'sm1/5': '500px',
+		'sm1/8': '565px',
+		'sm2': '580px',
+		'md': '640px',
+		'md2': '750px',
+		'md3': '930px',
+		'lg': '1280px',
+		'lg2': '1440px',
+		'lg3': '1800px',
+	},
   	extend: {
-		screens: {
-			'mw425': '425px',
-			'mw600': '600px',
-			'mw800': '800px',
-			'mw1200': '1200px',
-		},
+		textShadow: {
+			outline: '0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black',
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -64,5 +76,19 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
+	require("tailwindcss-animate"),
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
+	function ({ addUtilities }: { addUtilities: any }) {
+		addUtilities({
+		  '.text-shadow-outline': {
+			'text-shadow': '0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black',
+		  },
+		  
+		});
+	  },
+	  // eslint-disable-next-line @typescript-eslint/no-require-imports
+	  require('tailwindcss-motion'),
+  ],
 } satisfies Config;
