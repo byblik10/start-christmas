@@ -18,10 +18,10 @@ body {
     animation: var(--motion-all-loop-and-enter-animations);
   }
   .custom-motion-preset-oscillate {
-    --motion-loop-translate-y: 8%; /* Существующее значение */
-    --motion-timing: cubic-bezier(0.4, 0, 0.2, 1); /* Существующее значение */
-    --motion-translate-duration: 2s; /* Увеличиваем базовую длительность */
-    --motion-translate-perceptual-duration-multiplier: 2; /* Увеличиваем множитель */
+    --motion-loop-translate-y: 8%;
+    --motion-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    --motion-translate-duration: 2s;
+    --motion-translate-perceptual-duration-multiplier: 2;
     --motion-translate-loop-animation: motion-translate-loop-mirror calc(var(--motion-translate-duration) * var(--motion-translate-perceptual-duration-multiplier)) var(--motion-translate-timing) var(--motion-translate-delay) both var(--motion-translate-loop-count);
     animation: var(--motion-all-loop-and-enter-animations);
   }

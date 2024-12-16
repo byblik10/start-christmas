@@ -12,9 +12,9 @@ const ChristmasTitle: React.FC<ChristmasTitleProps> = ({ className }) => {
             <span className='animate-none'>BTC</span>
             {/* Картинка шапки Деда Мороза */}
             <ChristmasHat
-                initialWidth={115} // Начальная ширина
-                originalWidth={273} // Исходная ширина
-                originalHeight={397} // Исходная высота
+                initialWidth={115}
+                originalWidth={273}
+                originalHeight={397}
                 className='absolute top-[-175px] -left-[114px]'
             />
         </div>

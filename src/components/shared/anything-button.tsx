@@ -30,9 +30,9 @@ export const ContactUsButton: React.FC<Props> = ({ className }) => {
                         <DialogDescription className='m1:text-xl sm2:text-2xl text-center'>
                         Here you can contact us.
                         </DialogDescription>
-                        <div className='flex gap-4 m1:flex-col sm1:flex-row -mt-[1px]'> {/* Адаптивный flex */}
+                        <div className='flex gap-4 m1:flex-col sm1:flex-row -mt-[1px]'>
                             <Button variant='default' className='font-coiny flex h-[60px] w-[170px] max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] text-white m1:w-[140px] m1:h-[50px] sm1:w-[170px] sm1:h-[60px]'>
-                                <AtSign className="w-1 h-1" /> {/* Иконка с фиксированным размером */}
+                                <AtSign className="w-1 h-1" />
                             </Button>
                             <Button variant='default' className='font-thin font-coiny flex h-[60px] w-[170px] max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] text-white m1:w-[140px] m1:h-[50px] sm1:w-[170px] sm1:h-[60px]'>
                                 <Image src='/x-svg.svg' width={19} height={16} alt="" />

@@ -32,31 +32,32 @@ export const ImportantButton: React.FC<Props> = ({ className }) => {
                             1. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            Bitcoin was created in 2009 by an unknown person using the alias Satoshi Nakamoto.
+                        BE SURE YOU SAND BTC
                         </p>
                         <p className='m1:text-xl sm2:text-xl text-gray-600'>
                             2. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            The first Bitcoin transaction was a pizza purchase worth 10,000 BTC.
+                        MAKE SCREENSHOT OF YOUR TRANSACTION
                         </p>
                         <p className='m1:text-xl sm2:text-xl text-gray-600'>
                             3. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            Bitcoin was created in 2009 by an unknown person using the alias Satoshi Nakamoto.
+                        OPEN YOUR EMAIL
                         </p>
                         <p className='m1:text-xl sm2:text-xl text-gray-600'>
                             4. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            The first Bitcoin transaction was a pizza purchase worth 10,000 BTC.
+                        SEND SCREENSHOT OF YOUR TRANSACTION AND
+                        YOUR BTC ADRESS
                         </p>
                         <p className='m1:text-xl sm2:text-xl text-gray-600'>
                             5. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            The first Bitcoin transaction was a pizza purchase worth 10,000 BTC.
+                        WAIT TILL 25 OF DECEMBER FOR CHRISTMAS MIRACLE 
                         </p>
                     </DialogHeader>
                 </DialogContent>

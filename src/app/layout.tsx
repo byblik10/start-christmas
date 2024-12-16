@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Golos_Text, Sarina, Modak, Coiny } from "next/font/g
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-// Загрузка шрифтов
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,28 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 const golos = Golos_Text({
-  variable: "--font-golos", // Добавляем переменную для шрифта Golos
+  variable: "--font-golos",
   subsets: ['latin'],
   weight: ['400', '700'],
 });
 
 const sarina = Sarina({
-  variable: "--font-sarina", // Добавляем переменную для шрифта Sarina
+  variable: "--font-sarina",
   subsets: ['latin'],
-  weight: ['400'], // Sarina доступен только в одном весе (400)
+  weight: ['400'],
 });
 
 const modak = Modak({
-  variable: "--font-modak", // Добавляем переменную для шрифта Modak
+  variable: "--font-modak",
   subsets: ['latin'],
-  weight: ['400'], // Modak доступен только в одном весе (400)
+  weight: ['400'],
 });
 
-// Добавляем шрифт Coiny
 const coiny = Coiny({
-  variable: "--font-coiny", // Добавляем переменную для шрифта Coiny
+  variable: "--font-coiny",
   subsets: ['latin'],
-  weight: ['400'], // Coiny доступен только в одном весе (400)
+  weight: ['400'],
 });
 
 export const metadata: Metadata = {

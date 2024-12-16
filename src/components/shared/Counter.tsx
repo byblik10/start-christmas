@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 const CountdownTimer = () => {
-    const targetDate = new Date('2024-12-25T00:00:00').getTime(); // Целевая дата
+    const targetDate = new Date('2024-12-25T00:00:00').getTime();
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
@@ -11,7 +11,6 @@ const CountdownTimer = () => {
         }, 1000);
 
         return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function calculateTimeLeft() {

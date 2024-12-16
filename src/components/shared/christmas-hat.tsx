@@ -1,13 +1,13 @@
-'use client'; // Используем клиентский компонент
+'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
 
 interface ChristmasHatProps {
-    initialWidth?: number; // Начальная ширина картинки
-    originalWidth: number; // Исходная ширина картинки
-    originalHeight: number; // Исходная высота картинки
-    className?: string; // Дополнительные классы
+    initialWidth?: number;
+    originalWidth: number;
+    originalHeight: number;
+    className?: string;
 }
 
 const ChristmasHat: React.FC<ChristmasHatProps> = ({
@@ -16,7 +16,6 @@ const ChristmasHat: React.FC<ChristmasHatProps> = ({
     originalHeight,
     className,
 }) => {
-    // Состояние для ширины картинки
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [imageWidth, setImageWidth] = useState(initialWidth);
 

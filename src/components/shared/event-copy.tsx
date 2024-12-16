@@ -1,10 +1,10 @@
-'use client'; // Используем клиентский компонент
+'use client';
 
 import React, { useState } from 'react';
 import { Copy, CheckCheck } from 'lucide-react';
 
 interface EventCopyProps {
-    textToCopy: string; // Текст, который нужно скопировать
+    textToCopy: string;
     className?: string;
 }
 
@@ -12,12 +12,11 @@ const EventCopy: React.FC<EventCopyProps> = ({ textToCopy, className }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopyClick = () => {
-        // Копируем текст в буфер обмена
         navigator.clipboard.writeText(textToCopy).then(() => {
             setIsCopied(true);
             setTimeout(() => {
                 setIsCopied(false);
-            }, 2000); // Сбрасываем состояние через 2 секунды
+            }, 2000);
         });
     };
 
