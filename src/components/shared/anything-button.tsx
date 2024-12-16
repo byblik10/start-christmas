@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import { Button } from '../ui/button';
 import {
@@ -21,6 +20,10 @@ export const ContactUsButton: React.FC<Props> = ({ className }) => {
         window.open('https://x.com/btcxmascrypto', '_blank');
     };
 
+    const handleEmailClick = () => {
+        window.location.href = 'mailto:confirmation@btchristmas.com';
+    };
+
     return (
         <div className={`${className}`}>
             <Dialog>
@@ -36,13 +39,17 @@ export const ContactUsButton: React.FC<Props> = ({ className }) => {
                         Here you can contact us.
                         </DialogDescription>
                         <div className='flex gap-4 m1:flex-col sm1:flex-row -mt-[1px]'>
-                            <Button variant='default' className='font-coiny flex h-[60px] w-[170px] max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] text-white m1:w-[140px] m1:h-[50px] sm1:w-[170px] sm1:h-[60px]'>
+                            <Button 
+                                variant='default' 
+                                className='font-coiny flex h-[60px] w-[170px] max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] text-white m1:w-[140px] m1:h-[50px] sm1:w-[170px] sm1:h-[60px]'
+                                onClick={handleEmailClick}
+                            >
                                 <AtSign className="w-1 h-1" />
                             </Button>
                             <Button 
                                 variant='default' 
                                 className='font-thin font-coiny flex h-[60px] w-[170px] max-w-[216px] items-center justify-center rounded-[80px] bg-primary px-5 py-3 text-[20px] text-white m1:w-[140px] m1:h-[50px] sm1:w-[170px] sm1:h-[60px]'
-                                onClick={handleXClick} // Добавляем обработчик события
+                                onClick={handleXClick}
                             >
                                 <Image src='/x-svg.svg' width={19} height={16} alt="" />
                             </Button>

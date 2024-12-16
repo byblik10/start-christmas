@@ -40,7 +40,7 @@ const coiny = Coiny({
 
 export const metadata: Metadata = {
   title: "Christmas BTC",
-  description: "The New Year's miracle is coming soon!",
+  description: "The Christmas's miracle is coming soon!",
   icons: {
     icon: "/favicon-christmas-hat.png"
    },
