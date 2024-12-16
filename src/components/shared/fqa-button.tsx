@@ -26,26 +26,25 @@ export const FqaButton: React.FC<Props> = ({ className }) => {
                     <DialogHeader>
                         <DialogTitle className='m1:text-3xl sm2:text-4xl'>Frequently Asked Questions</DialogTitle>
                         <DialogDescription className='m1:text-xl sm2:text-2xl mt-[2px]'>
-                        The giveaway will take place on Christmas and the first morning of the New Year.
-                        (KEEP AN EYE ON YOUR WALLET)
                         </DialogDescription>
                         <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
+                        The giveaway will take place on Christmas and the first morning of the New Year.
+                        (KEEP AN EYE ON YOUR WALLET)
                         REWARDS FOR PROMOTION WILL BE ISSUED BEFORE DECEMBER 25.
                         </p>
-                        <p className='m1:text-base sm2:text-lg text-gray-600'>
-                        IMPORTANT!
+                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        REWARDS FOR PROMOTION WILL BE ISSUED BEFORE DECEMBER 25.
                         </p>
-                        <p className='m1:text-lg sm2:text-xl text-gray-600'>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        IMPORTANT!
                         You must have a wallet where we can credit the reward.
                         </p>
-                        <p className='m1:text-base sm2:text-lg text-gray-600'>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        You must have a wallet where we can credit the reward.
                         We won’t disclose how many tickets you earn for helping with promotion.
                         </p>
-                        <p className='m1:text-lg sm2:text-xl text-gray-600'>
-                            3. What is a BTC address?
-                        </p>
-                        <p className='m1:text-base sm2:text-lg text-gray-600'>
-                            A BTC address is a unique identifier for your wallet.
+                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        We won’t disclose how many tickets you earn for helping with promotion.
                         </p>
                     </DialogHeader>
                 </DialogContent>

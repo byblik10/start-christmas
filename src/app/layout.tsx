@@ -42,6 +42,9 @@ const coiny = Coiny({
 export const metadata: Metadata = {
   title: "Christmas BTC",
   description: "The New Year's miracle is coming soon!",
+  icons: {
+    icon: "/favicon.png"
+   },
 };
 
 export default function RootLayout({
