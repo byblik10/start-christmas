@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   title: "Christmas BTC",
   description: "The New Year's miracle is coming soon!",
   icons: {
-    icon: "/favicon.png"
+    icon: "/favicon-christmas-hat.png"
    },
 };
 
