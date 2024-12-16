@@ -17,7 +17,7 @@ export const MainSection: React.FC<Props> = ({ className }) => {
     return (
         <section className={cn("bg-[url(/christmas.png)] bg-cover bg-center bg-no-repeat pb-[96] pt-[108px] w-full h-screen", className)}>
                 {/* Главное содержание */}
-                <div className='relative m1:mt-[90px] sm2:mt-20'>
+                <div className='relative m1:mt-[60px] md:mt-20'>
                     {/* Большая надпись */}
                     <div className='flex flex-col items-center justify-center s:text-[80px] m1:text-[60px] sm:text-[70px] sm1:text-[80px] sm1/5:text-[90px] sm2:text-[100px] md:text-[110px] md2:text-[120px] md3:text-[150px] leading-[0.90] font-modak text-center text-white text-shadow-outline m1:h-[50px] m1:min-h-[50px] sm1:h-[80px] sm1:min-h-[80px] sm1/5:h-[200px] sm1/5:min-h-[200px]'>
                         <div className='motion-blur-in-[50px] motion-duration-[2s] motion-scale-in-[0] motion-delay-[0.2s]'>
