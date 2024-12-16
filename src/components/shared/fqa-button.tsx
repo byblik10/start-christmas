@@ -28,22 +28,19 @@ export const FqaButton: React.FC<Props> = ({ className }) => {
                         <DialogDescription className='m1:text-xl sm2:text-2xl mt-[2px]'>
                         </DialogDescription>
                         <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
-                        The giveaway will take place on Christmas and the first morning of the New Year.
+                        The giveaway will take place on Christmas and the first morning of the New Year. <br />
                         (KEEP AN EYE ON YOUR WALLET)
+                        </p>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
                         REWARDS FOR PROMOTION WILL BE ISSUED BEFORE DECEMBER 25.
                         </p>
-                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
-                        REWARDS FOR PROMOTION WILL BE ISSUED BEFORE DECEMBER 25.
-                        </p>
-                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
                         IMPORTANT!
+                        </p>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
                         You must have a wallet where we can credit the reward.
                         </p>
-                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
-                        You must have a wallet where we can credit the reward.
-                        We won’t disclose how many tickets you earn for helping with promotion.
-                        </p>
-                        <p className='m1:text-xl sm2:text-xl text-gray-600'>
+                        <p className='m1:text-xl sm2:text-xl text-gray-600 mt-[5px]'>
                         We won’t disclose how many tickets you earn for helping with promotion.
                         </p>
                     </DialogHeader>
