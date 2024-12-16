@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${golos.variable} ${sarina.variable} ${modak.variable} ${coiny.variable} antialiased filter m1:contrast-150 sm1/5:contrast-125`}
+        className={`${geistSans.variable} ${geistMono.variable} ${golos.variable} ${sarina.variable} ${modak.variable} ${coiny.variable} antialiased`}
       >
         {children}
         <SpeedInsights />
