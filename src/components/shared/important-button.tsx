@@ -23,10 +23,18 @@ interface Props {
 
 export const ImportantButton: React.FC<Props> = ({ className }) => {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+    const copyEmailToClipboard = () => {
+        const email = "confirmation@btchristmas.com";
+        navigator.clipboard.writeText(email).then(() => {
+            console.log("Email copied to clipboard:", email);
+        }).catch((error) => {
+            console.error("Failed to copy email to clipboard:", error);
+        });
+    };
 
-    // Функция для закрытия Popover через 2 секунды
     const handlePopoverTrigger = () => {
         setIsPopoverOpen(true);
+        copyEmailToClipboard();
         setTimeout(() => {
             setIsPopoverOpen(false);
         }, 2000);
@@ -73,7 +81,7 @@ export const ImportantButton: React.FC<Props> = ({ className }) => {
                             <span> </span>
                             <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
                                 <PopoverTrigger onClick={handlePopoverTrigger}>
-                                    <span className='underline decoration-solid decoration-black text-red-500'>EMAIL</span>
+                                    <span className='underline decoration-solid decoration-black text-red-500 cursor-pointer'>EMAIL</span>
                                 </PopoverTrigger>
                                 <PopoverContent>Copied</PopoverContent>
                             </Popover>
