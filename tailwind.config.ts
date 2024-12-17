@@ -8,25 +8,25 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-	screens: {
-		'm' : '300px',
-		'm1' : '350px',
-		'sm': '409px',
-		'sm1': '450px',
-		'sm1/5': '500px',
-		'sm1/8': '565px',
-		'sm2': '580px',
-		'md': '640px',
-		'md2': '750px',
-		'md3': '930px',
-		'lg': '1280px',
-		'lg2': '1440px',
-		'lg3': '1800px',
-	},
+  	screens: {
+  		m: '300px',
+  		m1: '350px',
+  		sm: '409px',
+  		sm1: '450px',
+  		'sm1/5': '500px',
+  		'sm1/8': '565px',
+  		sm2: '580px',
+  		md: '640px',
+  		md2: '750px',
+  		md3: '930px',
+  		lg: '1280px',
+  		lg2: '1440px',
+  		lg3: '1800px'
+  	},
   	extend: {
-		textShadow: {
-			outline: '0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black',
-		  },
+  		textShadow: {
+  			outline: '0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black'
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -73,6 +73,28 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },
