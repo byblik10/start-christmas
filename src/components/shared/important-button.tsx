@@ -23,6 +23,8 @@ interface Props {
 
 export const ImportantButton: React.FC<Props> = ({ className }) => {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+    // Функция для копирования email в буфер обмена
     const copyEmailToClipboard = () => {
         const email = "confirmation@btchristmas.com";
         navigator.clipboard.writeText(email).then(() => {
@@ -32,9 +34,10 @@ export const ImportantButton: React.FC<Props> = ({ className }) => {
         });
     };
 
+    // Функция для закрытия Popover через 2 секунды
     const handlePopoverTrigger = () => {
         setIsPopoverOpen(true);
-        copyEmailToClipboard();
+        copyEmailToClipboard(); // Копируем email при открытии Popover
         setTimeout(() => {
             setIsPopoverOpen(false);
         }, 2000);
@@ -81,7 +84,9 @@ export const ImportantButton: React.FC<Props> = ({ className }) => {
                             <span> </span>
                             <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
                                 <PopoverTrigger onClick={handlePopoverTrigger}>
-                                    <span className='underline decoration-solid decoration-black text-red-500 cursor-pointer'>EMAIL</span>
+                                    <span className='underline decoration-solid decoration-black text-red-500 cursor-pointer' style={{ textDecorationThickness: '2px' }}>
+                                        EMAIL
+                                    </span>
                                 </PopoverTrigger>
                                 <PopoverContent>Copied</PopoverContent>
                             </Popover>
