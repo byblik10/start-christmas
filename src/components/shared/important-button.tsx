@@ -73,7 +73,7 @@ export const ImportantButton: React.FC<Props> = ({ className }) => {
                             3. STEP
                         </p>
                         <p className='m1:text-base sm2:text-lg'>
-                            OPEN YOUR <span className='text-red-500'>EMAIL</span>
+                        <span className='text-red-500'>OPEN</span> YOUR <span className='text-red-500'>EMAIL</span>
                         </p>
                         <p className='m1:text-xl sm2:text-xl'>
                             4. STEP
